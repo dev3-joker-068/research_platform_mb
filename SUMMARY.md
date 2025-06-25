@@ -22,6 +22,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **Xamarin**: Excellent for enterprise environments with Microsoft stack
 - **Recommendation**: Flutter for most projects, React Native for rapid MVP development
 
+**📊 [Xem detail - Platform Comparison Overview](./01_platform_comparison_overview.md)**
+
 ### 02. Performance Benchmarks
 
 **Winner: KMM (95/100)**
@@ -30,6 +32,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **Flutter**: Excellent performance with 60fps rendering
 - **Xamarin**: Strong performance with native compilation
 - **Recommendation**: KMM for performance-critical apps, Flutter for balanced performance
+
+**📊 [Xem detail - Performance Benchmarks](./02_performance_benchmarks.md)**
 
 ### 03. Scalability Assessment
 
@@ -40,6 +44,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **React Native**: Good scalability with proper architecture
 - **Recommendation**: Flutter for large-scale applications, Xamarin for enterprise
 
+**📊 [Xem detail - Scalability Assessment](./03_scalability_assessment.md)**
+
 ### 04. Internationalization Support
 
 **Winner: Flutter (92/100)**
@@ -48,6 +54,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **React Native**: Good i18n with third-party libraries
 - **Xamarin**: Strong enterprise localization features
 - **Recommendation**: Flutter for global applications, Xamarin for enterprise i18n
+
+**📊 [Xem detail - Internationalization Support](./04_internationalization_support.md)**
 
 ### 05. Cost Optimization
 
@@ -58,6 +66,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **Flutter**: Balanced cost with high productivity
 - **Recommendation**: Ionic for budget-constrained projects, Flutter for best value
 
+**📊 [Xem detail - Cost Optimization](./05_cost_optimization.md)**
+
 ### 06. Rapid Project Cloning
 
 **Winner: React Native (88/100)**
@@ -66,6 +76,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **Flutter**: Good built-in templates and project setup
 - **Ionic**: Fast setup with extensive templates
 - **Recommendation**: React Native for rapid development, Ionic for web developers
+
+**📊 [Xem detail - Rapid Project Cloning](./06_rapid_project_cloning.md)**
 
 ### 07. Community & Libraries
 
@@ -76,6 +88,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **Unity**: Massive asset store for game development
 - **Recommendation**: React Native for rich ecosystem, Flutter for quality packages
 
+**📊 [Xem detail - Community & Libraries](./07_community_libraries.md)**
+
 ### 08. CI/CD & Testing
 
 **Winner: Flutter (88/100)**
@@ -84,6 +98,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **React Native**: Good testing ecosystem with mature tools
 - **Xamarin**: Strong integration with Microsoft DevOps
 - **Recommendation**: Flutter for comprehensive testing, Xamarin for Microsoft stack
+
+**📊 [Xem detail - CI/CD & Testing](./08_cicd_testing.md)**
 
 ### 09. Onboarding & Documentation
 
@@ -94,6 +110,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **React Native**: Good documentation with strong community
 - **Recommendation**: Flutter for best learning experience, React Native for JavaScript developers
 
+**📊 [Xem detail - Onboarding & Documentation](./09_onboarding_documentation.md)**
+
 ### 10. Cocos Integration
 
 **Winner: Unity (95/100)**
@@ -102,6 +120,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **Flutter**: Limited game development capabilities
 - **React Native**: Basic game development support
 - **Recommendation**: Unity for game development, Flutter for app-based games
+
+**📊 [Xem detail - Cocos Integration](./10_cocos_integration.md)**
 
 ### 11. WebView Integration
 
@@ -112,6 +132,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **Capacitor**: Core WebView functionality
 - **Recommendation**: Ionic/Capacitor for hybrid apps, React Native for complex WebView integration
 
+**📊 [Xem detail - WebView Integration](./11_webview_integration.md)**
+
 ### 12. Comprehensive Platform Analysis
 
 **Winner: Flutter (87/100)**
@@ -120,6 +142,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **React Native**: Strong second choice with mature ecosystem
 - **Xamarin**: Excellent for enterprise and Microsoft environments
 - **Recommendation**: Flutter for most projects, specific platforms for niche requirements
+
+**📊 [Xem detail - Comprehensive Platform Analysis](./12_comprehensive_platform_analysis.md)**
 
 ### 13. Modern Mobile Trends
 
@@ -130,6 +154,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **Unity**: Leading in AR/VR and immersive experiences
 - **Recommendation**: Flutter for future-ready apps, Unity for immersive experiences
 
+**📊 [Xem detail - Modern Mobile Trends](./13_modern_mobile_trends.md)**
+
 ### 14. Template Recommendations
 
 **Winner: React Native (88/100)**
@@ -138,6 +164,8 @@ The analysis evaluated 7 major platforms across 14 comprehensive criteria:
 - **Flutter**: Growing template collection with high quality
 - **Ionic**: Extensive web-based templates
 - **Recommendation**: React Native for template variety, Flutter for quality templates
+
+**📊 [Xem detail - Template Recommendations](./14_template_recommendations.md)**
 
 ## Overall Platform Rankings
 
