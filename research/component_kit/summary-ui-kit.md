@@ -16,9 +16,7 @@
    - [Layout Components](#layout-components)
    - [Slot Pattern for Complex Components](#slot-pattern-for-complex-components)
 5. [Roadmap Triển Khai](#roadmap-triển-khai)
-6. [Số Liệu Thành Công](#số-liệu-thành-công)
-7. [Hướng Dẫn Trình Bày Cho Ban Lãnh Đạo](#hướng-dẫn-trình-bày-cho-ban-lãnh-đạo)
-8. [Conclusion](#conclusion)
+6. [Conclusion](#conclusion)
 
 ---
 
