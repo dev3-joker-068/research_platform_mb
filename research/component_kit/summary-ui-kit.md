@@ -80,7 +80,7 @@ Component Kit Architecture
     └── Project-specific Overrides
 ```
 
-### Cấu Trúc Thư Mục
+### Cấu Trúc Thư Mục vs Components
 
 #### Loại 1 Package Độc Lập (Standalone Package)
 
@@ -120,6 +120,310 @@ component_kit/
 └── CHANGELOG.md
 ```
 
+## Chi Tiết Cấu Trúc Thư Mục Components
+
+### Cấu Trúc Chi Tiết cho Components/Atoms
+
+```
+components/
+├── atoms/                           # Thành phần cơ bản nhất
+│   ├── button/
+│   │   ├── app_button.dart          # Main button component
+│   │   ├── app_button_sheet.dart    # ButtonStyleSheet implementation
+│   │   ├── app_button_theme.dart    # Theme integration
+│   │   ├── app_button_types.dart    # ButtonVariant, ButtonSize, ButtonShape enums
+│   │   ├── app_button_test.dart     # Unit tests
+│   │   └── index.dart               # Export file
+│   ├── text/
+│   │   ├── app_text.dart            # Main text component
+│   │   ├── app_text_sheet.dart      # TextStyleSheet implementation
+│   │   ├── app_text_theme.dart      # Theme integration
+│   │   ├── app_text_types.dart      # TextVariant, TextSize, TextColor enums
+│   │   ├── app_text_test.dart       # Unit tests
+│   │   └── index.dart               # Export file
+│   ├── icon/
+│   │   ├── app_icon.dart            # Main icon component
+│   │   ├── app_icon_sheet.dart      # IconStyleSheet implementation
+│   │   ├── app_icon_types.dart      # IconSize, IconColor enums
+│   │   ├── app_icon_test.dart       # Unit tests
+│   │   └── index.dart               # Export file
+│   ├── input/
+│   │   ├── app_input.dart           # Main input component
+│   │   ├── app_input_sheet.dart     # InputStyleSheet implementation
+│   │   ├── app_input_theme.dart     # Theme integration
+│   │   ├── app_input_types.dart     # InputType, InputState enums
+│   │   ├── app_input_test.dart      # Unit tests
+│   │   └── index.dart               # Export file
+│   ├── avatar/
+│   │   ├── app_avatar.dart          # Main avatar component
+│   │   ├── app_avatar_sheet.dart    # AvatarStyleSheet implementation
+│   │   ├── app_avatar_types.dart    # AvatarSize, AvatarShape enums
+│   │   ├── app_avatar_test.dart     # Unit tests
+│   │   └── index.dart               # Export file
+│   ├── badge/
+│   │   ├── app_badge.dart           # Main badge component
+│   │   ├── app_badge_sheet.dart     # BadgeStyleSheet implementation
+│   │   ├── app_badge_types.dart     # BadgeVariant, BadgeSize enums
+│   │   ├── app_badge_test.dart      # Unit tests
+│   │   └── index.dart               # Export file
+│   ├── chip/
+│   │   ├── app_chip.dart            # Main chip component
+│   │   ├── app_chip_sheet.dart      # ChipStyleSheet implementation
+│   │   ├── app_chip_types.dart      # ChipVariant, ChipSize enums
+│   │   ├── app_chip_test.dart       # Unit tests
+│   │   └── index.dart               # Export file
+│   ├── divider/
+│   │   ├── app_divider.dart         # Main divider component
+│   │   ├── app_divider_sheet.dart   # DividerStyleSheet implementation
+│   │   ├── app_divider_types.dart   # DividerOrientation enum
+│   │   ├── app_divider_test.dart    # Unit tests
+│   │   └── index.dart               # Export file
+│   └── skeleton/
+│       ├── app_skeleton.dart         # Main skeleton component
+│       ├── app_skeleton_sheet.dart  # SkeletonStyleSheet implementation
+│       ├── app_skeleton_types.dart  # SkeletonType, SkeletonShape enums
+│       ├── app_skeleton_test.dart   # Unit tests
+│       └── index.dart               # Export file
+├── molecules/                       # Kết hợp từ atoms
+│   ├── search_bar/
+│   │   ├── app_search_bar.dart      # Main search bar component
+│   │   ├── app_search_bar_sheet.dart # SearchBarStyleSheet implementation
+│   │   ├── app_search_bar_types.dart # SearchBarVariant enum
+│   │   ├── app_search_bar_test.dart  # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── form_field/
+│   │   ├── app_form_field.dart       # Main form field component
+│   │   ├── app_form_field_sheet.dart # FormFieldStyleSheet implementation
+│   │   ├── app_form_field_types.dart # FormFieldType enum
+│   │   ├── app_form_field_test.dart  # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── list_item/
+│   │   ├── app_list_item.dart        # Main list item component
+│   │   ├── app_list_item_sheet.dart  # ListItemStyleSheet implementation
+│   │   ├── app_list_item_types.dart  # ListItemVariant enum
+│   │   ├── app_list_item_test.dart   # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── card/
+│   │   ├── app_card.dart             # Main card component
+│   │   ├── app_card_sheet.dart       # CardStyleSheet implementation
+│   │   ├── app_card_types.dart       # CardVariant enum
+│   │   ├── app_card_test.dart        # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── dialog/
+│   │   ├── app_dialog.dart           # Main dialog component
+│   │   ├── app_dialog_sheet.dart     # DialogStyleSheet implementation
+│   │   ├── app_dialog_types.dart     # DialogVariant enum
+│   │   ├── app_dialog_test.dart      # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── modal/
+│   │   ├── app_modal.dart            # Main modal component
+│   │   ├── app_modal_sheet.dart      # ModalStyleSheet implementation
+│   │   ├── app_modal_types.dart      # ModalVariant enum
+│   │   ├── app_modal_test.dart       # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── tooltip/
+│   │   ├── app_tooltip.dart          # Main tooltip component
+│   │   ├── app_tooltip_sheet.dart    # TooltipStyleSheet implementation
+│   │   ├── app_tooltip_types.dart    # TooltipPosition enum
+│   │   ├── app_tooltip_test.dart     # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── progress/
+│   │   ├── app_progress.dart         # Main progress component
+│   │   ├── app_progress_sheet.dart   # ProgressStyleSheet implementation
+│   │   ├── app_progress_types.dart   # ProgressType enum
+│   │   ├── app_progress_test.dart    # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── stepper/
+│   │   ├── app_stepper.dart          # Main stepper component
+│   │   ├── app_stepper_sheet.dart    # StepperStyleSheet implementation
+│   │   ├── app_stepper_types.dart    # StepperOrientation enum
+│   │   ├── app_stepper_test.dart     # Unit tests
+│   │   └── index.dart                # Export file
+│   └── breadcrumb/
+│       ├── app_breadcrumb.dart       # Main breadcrumb component
+│       ├── app_breadcrumb_sheet.dart # BreadcrumbStyleSheet implementation
+│       ├── app_breadcrumb_types.dart # BreadcrumbSeparator enum
+│       ├── app_breadcrumb_test.dart  # Unit tests
+│       └── index.dart                # Export file
+├── organisms/                       # Kết hợp từ molecules
+│   ├── header/
+│   │   ├── app_header.dart           # Main header component
+│   │   ├── app_header_sheet.dart     # HeaderStyleSheet implementation
+│   │   ├── app_header_types.dart     # HeaderVariant enum
+│   │   ├── app_header_test.dart      # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── navigation/
+│   │   ├── app_navigation.dart       # Main navigation component
+│   │   ├── app_navigation_sheet.dart # NavigationStyleSheet implementation
+│   │   ├── app_navigation_types.dart # NavigationType enum
+│   │   ├── app_navigation_test.dart  # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── sidebar/
+│   │   ├── app_sidebar.dart          # Main sidebar component
+│   │   ├── app_sidebar_sheet.dart    # SidebarStyleSheet implementation
+│   │   ├── app_sidebar_types.dart    # SidebarVariant enum
+│   │   ├── app_sidebar_test.dart     # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── footer/
+│   │   ├── app_footer.dart           # Main footer component
+│   │   ├── app_footer_sheet.dart     # FooterStyleSheet implementation
+│   │   ├── app_footer_types.dart     # FooterVariant enum
+│   │   ├── app_footer_test.dart      # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── product_card/
+│   │   ├── app_product_card.dart     # Main product card component
+│   │   ├── app_product_card_sheet.dart # ProductCardStyleSheet implementation
+│   │   ├── app_product_card_types.dart # ProductCardVariant enum
+│   │   ├── app_product_card_test.dart  # Unit tests
+│   │   └── index.dart                 # Export file
+│   ├── user_profile/
+│   │   ├── app_user_profile.dart     # Main user profile component
+│   │   ├── app_user_profile_sheet.dart # UserProfileStyleSheet implementation
+│   │   ├── app_user_profile_types.dart # UserProfileVariant enum
+│   │   ├── app_user_profile_test.dart  # Unit tests
+│   │   └── index.dart                 # Export file
+│   ├── data_table/
+│   │   ├── app_data_table.dart       # Main data table component
+│   │   ├── app_data_table_sheet.dart # DataTableStyleSheet implementation
+│   │   ├── app_data_table_types.dart # DataTableVariant enum
+│   │   ├── app_data_table_test.dart  # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── form/
+│   │   ├── app_form.dart             # Main form component
+│   │   ├── app_form_sheet.dart       # FormStyleSheet implementation
+│   │   ├── app_form_types.dart       # FormVariant enum
+│   │   ├── app_form_test.dart        # Unit tests
+│   │   └── index.dart                # Export file
+│   ├── gallery/
+│   │   ├── app_gallery.dart          # Main gallery component
+│   │   ├── app_gallery_sheet.dart    # GalleryStyleSheet implementation
+│   │   ├── app_gallery_types.dart    # GalleryLayout enum
+│   │   ├── app_gallery_test.dart     # Unit tests
+│   │   └── index.dart                # Export file
+│   └── dashboard/
+│       ├── app_dashboard.dart        # Main dashboard component
+│       ├── app_dashboard_sheet.dart  # DashboardStyleSheet implementation
+│       ├── app_dashboard_types.dart  # DashboardLayout enum
+│       ├── app_dashboard_test.dart   # Unit tests
+│       └── index.dart                # Export file
+└── layout/                          # Layout components
+    ├── h_stack.dart                 # Horizontal stack layout
+    ├── v_stack.dart                 # Vertical stack layout
+    ├── spacer.dart                  # Flexible space component
+    ├── app_padding.dart             # Consistent padding component
+    ├── responsive_container.dart     # Responsive container
+    ├── grid.dart                    # Grid layout component
+    ├── flex_container.dart          # Flexible container
+    ├── aspect_ratio.dart            # Aspect ratio component
+    ├── overflow_box.dart            # Overflow handling component
+    ├── constrained_box.dart         # Constrained box component
+    ├── layout_builder.dart          # Layout builder component
+    ├── custom_multi_child_layout.dart # Custom multi-child layout
+    ├── layout_test.dart             # Layout testing utilities
+    └── index.dart                   # Export file
+```
+
+**Chi Tiết Các Component:**
+
+**Atoms (Thành phần cơ bản nhất):**
+
+- **Button**: AppButton với variants (primary, secondary, danger, ghost, outlined, text), sizes (small, medium, large), shapes (rectangle, rounded, pill)
+- **Text**: AppText với variants (heading, subheading, body, caption, label), sizes (xs, sm, md, lg, xl), colors (primary, secondary, muted, danger)
+- **Icon**: AppIcon với sizes, colors, và custom icon support
+- **Input**: AppInput với types (text, email, password, number, tel), states (normal, focus, error, disabled), variants (outlined, filled, underlined)
+- **Avatar**: AppAvatar với sizes (xs, sm, md, lg, xl), shapes (circle, square, rounded), fallback support
+- **Badge**: AppBadge với variants (primary, secondary, success, warning, danger), sizes, và dot indicator
+- **Chip**: AppChip với variants (filled, outlined, soft), sizes, và removable option
+- **Divider**: AppDivider với orientations (horizontal, vertical), styles, và spacing
+- **Skeleton**: AppSkeleton cho loading states với customizable shapes và animations
+
+**Molecules (Kết hợp từ atoms):**
+
+- **SearchBar**: AppSearchBar với search input, filter options, và search history
+- **FormField**: AppFormField với label, validation, error states, và helper text
+- **ListItem**: AppListItem với leading/trailing slots, subtitle, và interactive states
+- **Card**: AppCard với header, content, footer, và action slots
+- **Dialog**: AppDialog với title, content, và action buttons
+- **Modal**: AppModal với backdrop, positioning, và animation options
+- **Tooltip**: AppTooltip với positioning, triggers, và custom content
+- **Progress**: AppProgress với linear/circular variants, colors, và animation
+- **Stepper**: AppStepper với horizontal/vertical layouts, validation states
+- **Breadcrumb**: AppBreadcrumb với navigation hierarchy và responsive behavior
+
+**Organisms (Kết hợp từ molecules):**
+
+- **Header**: AppHeader với navigation, actions, search, và user menu
+- **Navigation**: AppNavigation với tabs, pills, và responsive behavior
+- **Sidebar**: AppSidebar với collapsible sections, nested navigation
+- **Footer**: AppFooter với links, social media, và copyright info
+- **ProductCard**: AppProductCard với image, title, price, rating, và actions
+- **UserProfile**: AppUserProfile với avatar, info, stats, và actions
+- **DataTable**: AppDataTable với sorting, filtering, pagination, và selection
+- **Form**: AppForm với validation, submission, và field grouping
+- **Gallery**: AppGallery với grid layout, lightbox, và image optimization
+- **Dashboard**: AppDashboard với widgets, charts, và customizable layout
+
+**Layout Components:**
+
+- **HStack**: Horizontal layout với spacing, alignment, và responsive behavior
+- **VStack**: Vertical layout với spacing, alignment, và responsive behavior
+- **Spacer**: Flexible space với configurable flex values
+- **AppPadding**: Consistent padding với design tokens
+- **ResponsiveContainer**: Adaptive layout cho different screen sizes
+- **Grid**: Flexible grid layout với customizable columns và spacing
+- **FlexContainer**: Flexible layout với direction, wrap, và alignment
+- **AspectRatio**: Maintain aspect ratio cho content
+- **OverflowBox**: Handle overflow với custom constraints
+- **ConstrainedBox**: Apply size constraints với min/max values
+- **LayoutBuilder**: Dynamic layout based on available space
+- **CustomMultiChildLayout**: Custom layout algorithms
+
+---
+
+### Mô Tả Chi Tiết Các File:
+
+**1. Main Component File (app\_\*.dart):**
+
+- Widget implementation chính
+- Props và parameters
+- Build method với logic chính
+- Integration với StyleSheet
+
+**2. StyleSheet File (app\_\*\_sheet.dart):**
+
+- ThemeExtension implementation
+- Style resolution logic
+- Variant/size/shape handling
+- Color và spacing management
+
+**3. Theme File (app\_\*\_theme.dart):**
+
+- ThemeData integration
+- Default theme values
+- Theme switching logic
+- Custom theme overrides
+
+**4. Types File (app\_\*\_types.dart):**
+
+- Enum definitions (Variant, Size, Shape, etc.)
+- Type-safe constants
+- Validation helpers
+- Documentation cho types
+
+**5. Test File (app\_\*\_test.dart):**
+
+- Unit tests cho component
+- Widget tests cho rendering
+- StyleSheet tests
+- Integration tests
+
+**6. Index File (index.dart):**
+
+- Export statements
+- Public API definition
+- Documentation comments
+- Usage examples
+
 **Ưu điểm:**
 
 - Có thể publish lên pub.dev hoặc private repository
@@ -150,12 +454,121 @@ my_flutter_app/
 │   ├── shared/
 │   │   ├── component_kit/  # Embedded Component Kit
 │   │   │   ├── components/
-│   │   │   │   ├── atoms/  # Button, Text, Icon, etc.
-│   │   │   │   ├── molecules/
-│   │   │   │   ├── organisms/
-│   │   │   │   └── layout/ # HStack, VStack, Spacer, etc.
+│   │   │   │   ├── atoms/  # Thành phần cơ bản nhất
+│   │   │   │   │   ├── button/
+│   │   │   │   │   │   ├── app_button.dart
+│   │   │   │   │   │   ├── app_button_sheet.dart
+│   │   │   │   │   │   └── app_button_test.dart
+│   │   │   │   │   ├── text/
+│   │   │   │   │   │   ├── app_text.dart
+│   │   │   │   │   │   ├── app_text_sheet.dart
+│   │   │   │   │   │   └── app_text_test.dart
+│   │   │   │   │   ├── icon/
+│   │   │   │   │   │   ├── app_icon.dart
+│   │   │   │   │   │   └── app_icon_test.dart
+│   │   │   │   │   ├── input/
+│   │   │   │   │   │   ├── app_input.dart
+│   │   │   │   │   │   ├── app_input_sheet.dart
+│   │   │   │   │   │   └── app_input_test.dart
+│   │   │   │   │   ├── avatar/
+│   │   │   │   │   │   ├── app_avatar.dart
+│   │   │   │   │   │   └── app_avatar_test.dart
+│   │   │   │   │   ├── badge/
+│   │   │   │   │   │   ├── app_badge.dart
+│   │   │   │   │   │   └── app_badge_test.dart
+│   │   │   │   │   ├── chip/
+│   │   │   │   │   │   ├── app_chip.dart
+│   │   │   │   │   │   └── app_chip_test.dart
+│   │   │   │   │   ├── divider/
+│   │   │   │   │   │   └── app_divider.dart
+│   │   │   │   │   └── skeleton/
+│   │   │   │   │       ├── app_skeleton.dart
+│   │   │   │   │       └── app_skeleton_test.dart
+│   │   │   │   ├── molecules/  # Kết hợp từ atoms
+│   │   │   │   │   ├── search_bar/
+│   │   │   │   │   │   ├── app_search_bar.dart
+│   │   │   │   │   │   └── app_search_bar_test.dart
+│   │   │   │   │   ├── form_field/
+│   │   │   │   │   │   ├── app_form_field.dart
+│   │   │   │   │   │   └── app_form_field_test.dart
+│   │   │   │   │   ├── list_item/
+│   │   │   │   │   │   ├── app_list_item.dart
+│   │   │   │   │   │   └── app_list_item_test.dart
+│   │   │   │   │   ├── card/
+│   │   │   │   │   │   ├── app_card.dart
+│   │   │   │   │   │   └── app_card_test.dart
+│   │   │   │   │   ├── dialog/
+│   │   │   │   │   │   ├── app_dialog.dart
+│   │   │   │   │   │   └── app_dialog_test.dart
+│   │   │   │   │   ├── modal/
+│   │   │   │   │   │   ├── app_modal.dart
+│   │   │   │   │   │   └── app_modal_test.dart
+│   │   │   │   │   ├── tooltip/
+│   │   │   │   │   │   ├── app_tooltip.dart
+│   │   │   │   │   │   └── app_tooltip_test.dart
+│   │   │   │   │   ├── progress/
+│   │   │   │   │   │   ├── app_progress.dart
+│   │   │   │   │   │   └── app_progress_test.dart
+│   │   │   │   │   ├── stepper/
+│   │   │   │   │   │   ├── app_stepper.dart
+│   │   │   │   │   │   └── app_stepper_test.dart
+│   │   │   │   │   └── breadcrumb/
+│   │   │   │   │       ├── app_breadcrumb.dart
+│   │   │   │   │       └── app_breadcrumb_test.dart
+│   │   │   │   ├── organisms/  # Kết hợp từ molecules
+│   │   │   │   │   ├── header/
+│   │   │   │   │   │   ├── app_header.dart
+│   │   │   │   │   │   └── app_header_test.dart
+│   │   │   │   │   ├── navigation/
+│   │   │   │   │   │   ├── app_navigation.dart
+│   │   │   │   │   │   └── app_navigation_test.dart
+│   │   │   │   │   ├── sidebar/
+│   │   │   │   │   │   ├── app_sidebar.dart
+│   │   │   │   │   │   └── app_sidebar_test.dart
+│   │   │   │   │   ├── footer/
+│   │   │   │   │   │   ├── app_footer.dart
+│   │   │   │   │   │   └── app_footer_test.dart
+│   │   │   │   │   ├── product_card/
+│   │   │   │   │   │   ├── app_product_card.dart
+│   │   │   │   │   │   └── app_product_card_test.dart
+│   │   │   │   │   ├── user_profile/
+│   │   │   │   │   │   ├── app_user_profile.dart
+│   │   │   │   │   │   └── app_user_profile_test.dart
+│   │   │   │   │   ├── data_table/
+│   │   │   │   │   │   ├── app_data_table.dart
+│   │   │   │   │   │   └── app_data_table_test.dart
+│   │   │   │   │   ├── form/
+│   │   │   │   │   │   ├── app_form.dart
+│   │   │   │   │   │   └── app_form_test.dart
+│   │   │   │   │   ├── gallery/
+│   │   │   │   │   │   ├── app_gallery.dart
+│   │   │   │   │   │   └── app_gallery_test.dart
+│   │   │   │   │   └── dashboard/
+│   │   │   │   │       ├── app_dashboard.dart
+│   │   │   │   │       └── app_dashboard_test.dart
+│   │   │   │   └── layout/  # Layout components
+│   │   │   │       ├── h_stack.dart
+│   │   │   │       ├── v_stack.dart
+│   │   │   │       ├── spacer.dart
+│   │   │   │       ├── app_padding.dart
+│   │   │   │       ├── responsive_container.dart
+│   │   │   │       ├── grid.dart
+│   │   │   │       ├── flex_container.dart
+│   │   │   │       ├── aspect_ratio.dart
+│   │   │   │       ├── overflow_box.dart
+│   │   │   │       ├── constrained_box.dart
+│   │   │   │       ├── layout_builder.dart
+│   │   │   │       ├── custom_multi_child_layout.dart
+│   │   │   │       └── layout_test.dart
 │   │   │   ├── variants/   # Variant management
+│   │   │   │   ├── variant.dart
+│   │   │   │   ├── size.dart
+│   │   │   │   └── shape.dart
 │   │   │   └── stylesheets/
+│   │   │       ├── button_style_sheet.dart
+│   │   │       ├── text_style_sheet.dart
+│   │   │       ├── input_style_sheet.dart
+│   │   │       └── card_style_sheet.dart
 │   │   ├── utils/          # App utilities
 │   │   ├── constants/      # App constants
 │   │   └── services/       # App services
