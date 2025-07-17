@@ -35,6 +35,7 @@ Our research addressed the following key areas:
   - Caching and performance optimization
   - Real-time theme switching capabilities
 - **Technical Implementation**:
+
   ```dart
   class DesignTokenManager {
     static final Map<String, dynamic> _tokens = {};

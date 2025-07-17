@@ -1,0 +1,12 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ValueModel _$ValueModelFromJson(Map<String, dynamic> json) => ValueModel(
+      value: json['value'] as String,
+    );
+
+Map<String, dynamic> _$ValueModelToJson(ValueModel instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
